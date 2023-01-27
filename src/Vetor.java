@@ -4,22 +4,36 @@ import java.util.Scanner;
 
 public class Vetor {
     public static void main(String[] args) {
-    exercicioSete();
+        exercicioUm();
+        exercicioDois();
+        exercicioTres();
+        exercicioQuatro();
+        exercicioCinco();
+        exercicioSeis();
+        exercicioSete();
     }
 
-    public static void exercicioUm(){
+ public static void exercicioUm(){
         /*  Faça um programa que leia um número inteiro positivo N (máximo = 10) e depois N números inteiros
             e armazene-os em um vetor. Em seguida, mostrar na tela todos os números negativos lidos. */
         Scanner teclado = new Scanner(System.in);
         System.out.println("Quantos números serão inscritos?");
         int n = teclado.nextInt();
         int [] vect = new int[n];
+        int qtdNegativo = 0;
+        ArrayList vectNegativo = new ArrayList<>();
+
         for(int i = 0; i<n; i++) {
             System.out.println("Número: ");
             int numAtual = teclado.nextInt();
             vect[i] = numAtual;
+            if(numAtual<0) {
+                vectNegativo.add(numAtual);
+
+            }
         }
         System.out.println(Arrays.toString(vect));
+        System.out.println(vectNegativo);
     }
 
     public static void exercicioDois(){
