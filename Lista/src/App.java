@@ -4,7 +4,11 @@ import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        System.out.println("Hello,World!");
+}
+
+public static void empregado(){
+    Scanner teclado = new Scanner(System.in);
         ArrayList <Empregado> lista = new ArrayList<>();
         System.out.println("Digite o número de empregados: ");
         int n = teclado.nextInt();
