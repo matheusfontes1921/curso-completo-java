@@ -1,6 +1,10 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import java.util.Date;
+
 
 public class App {
     public static void main(String[] args) {
@@ -53,5 +57,37 @@ public static void empregado(){
     public static boolean conferirId(ArrayList<Empregado> empregado, int id) {
         Empregado funcionario = empregado.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
         return funcionario!=null;
+    }
+
+    public static void order() throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Dados do cliente");
+        System.out.print("Nome: ");
+        String name = teclado.nextLine();
+        System.out.print("\nEmail: ");
+        String email = teclado.nextLine();
+        System.out.print("\nData de nascimento: ");
+        Date data = sdf.parse(teclado.next());
+        Cliente c1 = new Cliente(name, email, data);
+        System.out.println("Dados do pedido");
+        System.out.print("Status: ");
+        String status = teclado.nextLine();
+        OrderStatus s1 = OrderStatus.valueOf(status.toUpperCase());
+        System.out.print("\nQuantos itens? ");
+        int quantidade = teclado.nextInt();
+        String nomeProduto;
+        double precoProduto;
+        int quantidadeProduto;
+        for (int i = 1; i<=quantidade; i++) {
+            System.out.println("Entre com os dados do cliente número " + i);
+            System.out.print("Nome do produto: ");
+            nomeProduto = teclado.nextLine();
+            System.out.print("\nPreço do produto: ");
+            precoProduto = teclado.nextDouble();
+            System.out.print("\nQuantidade: ");
+            quantidadeProduto = teclado.nextInt();
+
+        }
     }
 }
