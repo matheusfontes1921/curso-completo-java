@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Enum/Enum.iml" filepath="$PROJECT_DIR$/Enum/Enum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Heranca/Heranca.iml" filepath="$PROJECT_DIR$/Heranca/Heranca.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lista/Lista.iml" filepath="$PROJECT_DIR$/Lista/Lista.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Vetor/Vetor.iml" filepath="$PROJECT_DIR$/Vetor/Vetor.iml" />
       <module fileurl="file://$PROJECT_DIR$/curso-completo-java.iml" filepath="$PROJECT_DIR$/curso-completo-java.iml" />
     </modules>
   </component>
