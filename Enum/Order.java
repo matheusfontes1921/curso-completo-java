@@ -20,14 +20,40 @@ public class Order {
     }
 
     public void addItem(OrderItem orderItem) {
-
+        itens.add(orderItem);
     }
      public void removeItem(OrderItem orderItem){
-
+        itens.remove(orderItem);
      }
      public double total(){
-        return 10.0;
+        double soma = 0;
+        for (OrderItem c : itens) {
+            soma += c.subTotal();
+        }
+        return soma;
      }
 
+    public Date getMoment() {
+        return moment;
+    }
 
+    public void setMoment(Date moment) {
+        this.moment = moment;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 }
