@@ -1,4 +1,4 @@
-public class PessoaJuridica extends Pessoa{
+public final class PessoaJuridica extends Pessoa{
     private int numeroFuncionarios;
 
     public PessoaJuridica(String nome, Double rendaAnual, Integer numeroFuncionarios) {
@@ -7,7 +7,7 @@ public class PessoaJuridica extends Pessoa{
     }
 
     @Override
-    public double calcularImporto() {
+    public final double calcularImporto() {
         if (numeroFuncionarios > 10) {
             return getRendaAnual() * 0.14;
         } else {

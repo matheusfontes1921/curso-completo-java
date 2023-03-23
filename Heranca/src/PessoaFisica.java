@@ -1,4 +1,4 @@
-public class PessoaFisica extends Pessoa {
+public final class PessoaFisica extends Pessoa {
     private Double gastosSaude;
     public PessoaFisica(String nome, Double rendaAnual, Double gastosSaude){
         super(nome, rendaAnual);
@@ -6,7 +6,7 @@ public class PessoaFisica extends Pessoa {
     }
 
     @Override
-    protected double calcularImporto() {
+    public final double calcularImporto() {
         if (rendaAnual >20000) {
             return (rendaAnual*0.25)-(gastosSaude*0.50);
         } else {
