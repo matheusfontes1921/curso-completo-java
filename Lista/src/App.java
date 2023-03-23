@@ -64,6 +64,7 @@ public static void empregado(){
         Scanner teclado = new Scanner(System.in);
         System.out.println("Dados do cliente");
         System.out.print("Nome: ");
+
         String name = teclado.nextLine();
         System.out.print("\nEmail: ");
         String email = teclado.nextLine();
