@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+    }
+
+    public static void taxPayer() {
         List<Pessoa> lista = new ArrayList<>();
         System.out.println("Quantas pessoas irão pagar impostos? ");
         int quantidade = sc.nextInt();
@@ -27,10 +31,10 @@ public class App {
                 System.out.println("Valor inválido");
             }
         }
-            System.out.println("Taxas pagas: ");
-            for (Pessoa p : lista) {
-                System.out.println("Nome: " + p.getNome() + "\nTaxas pagas: " + p.calcularImporto());
-            }
+        System.out.println("Taxas pagas: ");
+        for (Pessoa p : lista) {
+            System.out.println("Nome: " + p.getNome() + "\nTaxas pagas: " + p.calcularImporto());
         }
-    }
+    }}
+}
 
