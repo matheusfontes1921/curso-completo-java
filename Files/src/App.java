@@ -2,23 +2,29 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
+        List<String> nomesPessoas = new ArrayList<>();
         System.out.println("Digite o caminho do arquivo: ");
         String strPath = teclado.nextLine();
         File path = new File(strPath);
         try(BufferedReader br = new BufferedReader(new FileReader (path))){
             String line = br.readLine();
             while (line != null) {
-                System.out.println(line);
                 line = br.readLine();
+                nomesPessoas.add(line);
             }
+            nomesPessoas.remove(null);
     }
         catch (IOException e) {
             System.out.println("Erro: " + e.getMessage());
+        }
+        Collections.sort(nomesPessoas);
+        for (String pessoa : nomesPessoas) {
+            System.out.println(pessoa);
         }
 }
 
